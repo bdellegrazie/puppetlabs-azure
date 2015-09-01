@@ -14,6 +14,8 @@ Provisioning.DeleteRootPassword=<%= delete_root_password %>       # Password aut
 Provisioning.RegenerateSshHostKeyPair=<%= regenerate_ssh_key %>   # Generate fresh host key pair.
 Provisioning.SshHostKeyPairType=<%= ssh_key_type %>               # Supported values are "rsa", "dsa" and "ecdsa".
 Provisioning.MonitorHostName=<%= monitor_hostname %>              # Monitor host name changes and publish changes via DHCP requests.
+Provisioning.DecodeCustomData=<%= decode_custom_data %>           # Decode CustomData from Base64.
+Provisioning.ExecuteCustomData=<%= execute_custom_data %>         # Execute CustomData after provisioning.
 
 ResourceDisk.Format=<%= resource_disk_format %>                   # Format if unformatted. If 'n', resource disk will not be mounted.
 ResourceDisk.Filesystem=<%= resource_disk_filesystem %>           #
@@ -23,7 +25,9 @@ ResourceDisk.SwapSizeMB=<%= resource_disk_swap_size %>            # Size of the 
 
 LBProbeResponder=y                      # Respond to load balancer probes if requested by Windows Azure.
 
-Logs.Verbose=<%= verbose_logs %>                                  #
+Logs.File=/var/log/waagent.log          # File to write log to.
+Logs.Console=y                          # Enable logging to serial console (y|n)
+Logs.Verbose=<%= verbose_logs %>        # Enable verbose logging (y|n)
 
 OS.RootDeviceScsiTimeout=300            # Root device timeout in seconds.
 OS.OpensslPath=None                     # If "None", the system default version is used.

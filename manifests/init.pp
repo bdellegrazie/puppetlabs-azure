@@ -9,6 +9,8 @@
 #      $regenerate_ssh_key         = 'y'
 #      $ssh_key_type               = 'rsa' # Valid values are: rsa, dsa, ecdsa
 #      $monitor_hostname           = 'y'
+#      $decode_custom_data         = 'n'
+#      $execute_custom_data        = 'n'
 #      $resource_disk_format       = 'y'
 #      $resource_disk_filesystem   = 'ext4'
 #      $resource_disk_mountpoint   = '/mnt/resource'
@@ -34,6 +36,8 @@ class azure(
   $regenerate_ssh_key         = 'y',
   $ssh_key_type               = 'rsa', # Valid values are: rsa, dsa, ecdsa
   $monitor_hostname           = 'y',
+  $decode_custom_data         = 'n',
+  $execute_custom_data        = 'n',
   $resource_disk_format       = 'y',
   $resource_disk_filesystem   = 'ext4',
   $resource_disk_mountpoint   = '/mnt/resource',
